@@ -1,0 +1,294 @@
+
+		
+			
+		  
+		<style>
+			table {
+			  width: 100%;
+			  border-collapse: collapse;
+			}
+		
+			th, td {
+			  padding: 8px;
+			  text-align: left;
+			  border-bottom: 1px solid #ddd;
+			}
+		
+			th {
+			  background-color: #f2f2f2;
+			}
+
+			
+    .search-button {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+	  width: 100px;
+	  height: 45px;
+    }
+	a {
+    text-decoration: none;
+  }
+
+  body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      width: 200px;
+      background-color: #f1f1f1;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar li a {
+      display: block;
+      color: #333;
+      text-align: left;
+      padding: 12px 16px;
+      text-decoration: none;
+	  margin-top: 20px;
+    }
+
+    /* Change the color of the active link */
+    
+    .sidebar li a:hover {
+      background-color: #ddd;
+	}
+
+	.custom-button {
+      height: 35px;
+      width: 90px;
+      border-radius: 8px;
+      background-color: #63899E;
+      color: white;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+	  margin-left: 600px;
+	}
+	
+		</style>
+<!-- </head>
+
+<body> -->
+
+	<!-- for header part -->
+	<header>
+
+		<div class="logosec">
+			<div class="logo">Bug Tracker</div>
+			<!-- <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+				class="icn menuicn"
+				id="menuicn"
+				alt="menu-icon"> -->
+		</div>
+
+		<!-- <div class="searchbar">
+			<input type="text"
+				placeholder="Search">
+			<div class="searchbtn">
+			<img src=
+"https://tse3.mm.bing.net/th/id/OIP.QNAx0aIErXUYCygJ9RjohgHaHa?pid=ImgDet&rs=1"
+					class="icn srchicn"
+					alt="search-icon">
+			</div>
+		</div> -->
+
+		<div class="message">
+			<div class="circle"></div>
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
+				class="icn"
+				alt="">
+			<div class="dp">
+			<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+					class="dpicn"
+					alt="dp">
+			</div>
+		</div>
+
+	</header>
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="sidebar">
+					<ul>
+					  <li><a class="active" href="#home">Dashboard</a></li>
+					  <li><a href="#setting"><a routerLink="settings">Settings</a></a></li>
+					  <li><a href="logout"><a routerLink="logout">Logout</a></a></li>
+					</ul>
+				  </div>
+			</nav>
+		</div>
+		<div class="main">
+
+			<div class="searchbar2">
+				<input type="text"
+					name=""
+					id=""
+					placeholder="Search">
+				<div class="searchbtn">
+				<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+						class="icn srchicn"
+						alt="search-button">
+				</div>
+			</div>
+
+			<div class="box-container">
+			</div>
+
+			
+
+			<div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles">Bug List</h1>
+					<button class="custom-button" routerLink="/create-bug">Add Bug</button>
+					
+				</div>
+
+				<div class="report-body">
+					<div class="search-container">
+						<input type="text" placeholder="Search">
+						<button type="submit">Search</button>
+					  </div>
+					<div class="report-topic-heading">
+
+						<table class="table table-striped">
+							<thead>
+							<th>ID</th>
+							<th>BugName</th>
+							<th>Description</th>
+							<th>Assigned To</th>
+							<th>Assigned By</th>
+							<th>Status</th>
+							<th>Update Status</th>
+							<th>Created Date</th>
+							
+							</thead>
+							<tbody>
+							<tr>
+							<td>1</td>
+							<td>Login Page Error</td>
+							<td>Encountering error that prevents successful authentication</td>
+							<td>John Doe</td>
+							<td>Jane Smith</td>
+							<td>Open</td>
+							<td><select>
+								
+								<option value="Select">Select</option>
+								<option value="On Progress">On Progress</option>
+								<option value="Closed">Closed</option>
+								
+								
+							  </select></td>
+							<td>2023-06-01</td>
+							<button class="delete-button">Delete</button>
+							
+							</tr>
+							<tr>
+							<td>2</td>
+							<td>Database Error when Saving User Profile</td>
+							<td>When  user attempts to save their profile information, a database error occurs,</td>
+							<td>Mike Johnson</td>
+							<td>John Smith</td>
+							<td>Closed</td>
+							<td><select>
+								
+								<option value="Select">Select</option>
+								<option value="On Progress">On Progress</option>
+								<option value="Closed">Closed</option>
+								
+								
+							  </select></td>
+							
+							<td>2023-02-03</td>
+							<button class="delete-button">Delete</button>
+							
+							</tr>
+							<tr>
+
+							<td>3</td>
+							<td>Slow Performance on Search Functionality</td>
+							<td>The search feature experiences significant delays or timeouts when processing search queries</td>
+			
+							<td>Benjamin</td>
+							<td>Smith</td>
+							<td>Closed</td>
+							<td><select>
+								
+								<option value="Select">Select</option>
+								<option value="On Progress">On Progress</option>
+								<option value="Closed">Closed</option>
+								
+								
+							  </select></td>
+							<td>2023-04-23</td>
+							<button class="delete-button">Delete</button>
+							</tr>
+							<tr>
+							<td>4</td>
+							<td>Incorrect Sorting of Product Listings</td>
+							<td>The product listing page does not correctly sort the products based on user-defined sorting criteria</td>
+							<td>Mike Johnson</td>
+							<td>Aswin</td>
+							<td>Closed</td>
+							<td><select>
+								
+								<option value="Select">Select</option>
+								<option value="On Progress">On Progress</option>
+								<option value="Closed">Closed</option>
+								
+								
+							  </select></td>
+							<td>2023-06-30</td>
+							<button class="delete-button">Delete</button>
+							</tr>
+							<tr>
+							<td>5</td>
+							<td>Unauthorized Access to Admin Functionality</td>
+							<td>Leading to unauthorized actions or data breaches.</td>
+							<td>Benjamin</td>
+							<td>Mathew</td>
+							<td>Open</td>
+							<td><select>
+								
+								<option value="Select">Select</option>
+								<option value="On Progress">On Progress</option>
+								<option value="Closed">Closed</option>
+								
+								
+							  </select></td>
+							<td>2023-10-27</td>
+							<button class="delete-button">Delete</button>
+							</tr>
+							</tbody>
+							</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<!-- <script src="./b.component.js"></script>
+</body>
+</html> -->
